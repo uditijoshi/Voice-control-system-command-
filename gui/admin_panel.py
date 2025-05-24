@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt, pyqtSignal
 from banking.accounts import AccountManager
 from os_concepts.scheduling import TransactionScheduler
 from os_concepts.multithreading import BankingThreads
-from PyQt5.QtWidgets import QComboBox  # Missing in your imports
+from PyQt5.QtWidgets import QComboBox  # Missing in our imports
 import mysql.connector
 from config import DB_CONFIG
 
@@ -248,7 +248,7 @@ class AdminPanel(QWidget):
         self.scheduler.stop_scheduler()
         self.start_btn.setEnabled(True)
         self.stop_btn.setEnabled(False)
-        self.parent.show_info("Transaction processing stopped")
+        self.parent.show_info("Transaction processing is stopped")
     
     def set_scheduling_algorithm(self):
         """Set the scheduling algorithm"""
@@ -261,9 +261,9 @@ class AdminPanel(QWidget):
     def run_concurrent_demo(self):
         """Run the concurrent transfers demo"""
         self.thread_manager.start_concurrent_transfers_demo()
-        self.parent.show_info("Concurrent transfers demo started. Check console for output.")
+        self.parent.show_info("Concurrent transfers demo started. Check the console for output.")
     
     def run_scheduling_demo(self):
         """Run the scheduling algorithms demo"""
         self.scheduler.demo_scheduling_algorithms()
-        self.parent.show_info("Scheduling demo started. Check console for output.")
+        self.parent.show_info("Scheduling demo started. Check the console for output.")
