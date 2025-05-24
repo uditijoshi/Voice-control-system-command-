@@ -157,7 +157,7 @@ class UserDashboard(QWidget):
         
         layout.addWidget(form)
         
-        # Submit button
+        # This is Submit button
         submit_btn = QPushButton("Submit Transfer")
         submit_btn.clicked.connect(self.submit_transfer)
         layout.addWidget(submit_btn)
@@ -178,7 +178,7 @@ class UserDashboard(QWidget):
             self.accounts_table.setItem(row, 2, QTableWidgetItem(f"${account['balance']:.2f}"))
             self.accounts_table.setItem(row, 3, QTableWidgetItem(str(account['created_at'])))
         
-        # Update account dropdowns
+        # This is for Updating the account dropdowns
         self.trans_account.clear()
         self.transfer_from.clear()
         
@@ -288,7 +288,7 @@ class UserDashboard(QWidget):
             self.parent.show_error("Invalid amount")
             return
         
-        # Record transaction
+        # This is the Record transaction
         transaction_id = self.transaction_manager.record_transaction(
             account_id, trans_type, amount, description
         )
@@ -324,7 +324,7 @@ class UserDashboard(QWidget):
             self.parent.show_error("Invalid amount")
             return
         
-        # Initiate transfer
+        # This is  Initiating the transfer
         success, message = self.transfer_manager.initiate_transfer(
             from_account_id, to_account, amount, description
         )
