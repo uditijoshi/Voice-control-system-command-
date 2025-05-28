@@ -70,4 +70,4 @@ MIT License
 
 ## Contact
 
-For support or inquiries, please contact example@example.com
+For support or inquiries, please contact pankajlohani2016@gmail.com
