@@ -1,0 +1,10 @@
+To transfer money between accounts, follow these steps:
+
+1. Log in to your account
+2. Go to Accounts section
+3. Click on Transfer Funds
+4. Select source account
+5. Select destination account
+6. Enter transfer amount
+7. Enter transfer description (optional)
+8. Click Submit
