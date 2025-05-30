@@ -172,8 +172,8 @@ class AuthSystem:
                 del active_sessions[session_id]
                 return True
             return False
-    
-    def validate_session(self, session_id):
+
+    def validate_session(self, session_id):  
         """Check if session is valid"""
         with session_lock:
             if session_id in active_sessions:
